@@ -24,7 +24,7 @@ class NameRequest extends Request {
 		return [
 			'name'=>'required',
 			'email'=>'email|required',
-			'image'=>'required|mimes:jpeg,bmp,png'
+			'image'=>'required'
 		];
 	}
 

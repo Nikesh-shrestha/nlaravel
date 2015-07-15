@@ -24,6 +24,15 @@ class NameController extends Controller {
 		$name->save();
 		return Redirect::to('name');
 
+		if (Input::hasFile('image'))
+		{
+		    $file = Input::file('image');
+		    $file->move(storage_path() . '/uploads', $file->getClientOriginalName());
+		}
+		else{
+			return Redirect::to('name');
+		}
+
 	}
 
 }
